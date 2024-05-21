@@ -32,10 +32,7 @@ Example Frontend Fetch:
 fetch("https://tl-onboarding-project-dxm7krgnwa-uc.a.run.app/prompt", {
     method: "POST",
     headers: {
-        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-        eyJ1c2VybmFtZSI6ImdhYnJpZWxzZXNzaW9ucyIsImV4cGlyZXMiOiIyMDI0LTA1LTIwVDIy
-        OjQ0OjM5LjMzMVoiLCJpYXQiOjE3MTYyNDE0Nzl9.
-        Nv0cSSKk6jV-o7o3kwl4f7LCa-AMWaUnA8csGJ4DscY" // Add your JWT here!
+        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdhYnJpZWxzZXNzaW9ucyIsImV4cGlyZXMiOiIyMDI0LTA1LTIwVDIyOjQ0OjM5LjMzMVoiLCJpYXQiOjE3MTYyNDE0Nzl9.Nv0cSSKk6jV-o7o3kwl4f7LCa-AMWaUnA8csGJ4DscY" // Add your JWT here!
     },
     body: JSON.stringify({
         model: "gpt-4o",
