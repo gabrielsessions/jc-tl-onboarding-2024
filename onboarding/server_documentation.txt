@@ -1,0 +1,49 @@
+Tech Lead Onboarding - Authentication and OpenAI Server Documentation
+Link: https://tl-onboarding-project-dxm7krgnwa-uc.a.run.app
+
+The server acts as a proxy between users/devs and the OpenAI API so you 
+don't need to pay/register for API access!
+
+Server Runtime: Bun
+Authentication: JWT (JSON Web Tokens)
+ - JWTs contain the username of the user and an expiration date
+ - Tokens expire 1 hr after issue
+
+The server has three publicly accessible endpoints:
+ - `/` (GET): Returns a "Hello, World!" message to the user
+ - `/login` (POST): Returns a JWT if given a correct username and password
+ combination. Otherwise it throws a 401 error.
+
+Example Frontend Fetch:
+fetch("https://tl-onboarding-project-dxm7krgnwa-uc.a.run.app/login", {
+    method: "POST",
+    body: JSON.stringify({
+        username: "developer",
+        password: <ASK_GABE_FOR_PASSWORD>
+    })
+  }).then(res => res.json()).then(res => console.log(res))
+
+
+ - `/prompt` (POST): If the user is authenticated and provides a correctly
+ formatted OpenAI prompt, the endpoint sends the prompt to OpenAI and returns
+ the response it receives from OpenAI. 
+
+Example Frontend Fetch:
+fetch("https://tl-onboarding-project-dxm7krgnwa-uc.a.run.app/prompt", {
+    method: "POST",
+    headers: {
+        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+        eyJ1c2VybmFtZSI6ImdhYnJpZWxzZXNzaW9ucyIsImV4cGlyZXMiOiIyMDI0LTA1LTIwVDIy
+        OjQ0OjM5LjMzMVoiLCJpYXQiOjE3MTYyNDE0Nzl9.
+        Nv0cSSKk6jV-o7o3kwl4f7LCa-AMWaUnA8csGJ4DscY" // Add your JWT here!
+    },
+    body: JSON.stringify({
+        model: "gpt-4o",
+        messages: [{ role: "user", content: "What is 1+1?" }]
+    })
+}).then(res => res.json()).then(res => console.log(res))
+
+
+For help on how to structure your OpenAI prompts and avaliable config options,
+check out OpenAI's documentation: 
+https://platform.openai.com/docs/guides/text-generation/chat-completions-api

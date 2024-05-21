@@ -943,14 +943,6 @@ video {
   transform: none;
 }
 
-.cursor-none {
-  cursor: none;
-}
-
-.cursor-not-allowed {
-  cursor: not-allowed;
-}
-
 .touch-auto {
   touch-action: auto;
 }

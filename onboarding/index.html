@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TL Resources</title>
+  <link href="../output.css" rel="stylesheet">
+</head>
+
+<body class=" bg-jumbocode-black">
+  <div class="my-4 bg-gray-100 rounded-xl p-6 lg:w-2/3 2xl:w-1/2 lg:mx-auto py-8 mx-8 lg:max-w-1/2">
+    <h1 class="text-green-600 font-bold text-center lg:text-3xl text-xl md:text-2xl lg:block">Tech Lead Onboarding
+      Project</h1>
+    <p class="mt-6">Tech leads should be proficient with a wide variety of web development tools including</p>
+    <ul class="list-disc ml-4 font-normal">
+      <li class="list-item">Frontend Development: React, JavaScript/TypeScript, CSS, JSX/TSX </li>
+      <li class="list-item">Backend Servers: Runtimes, APIs, Basic Networking (HTTP)</li>
+      <li class="list-item">DBMS: SQL v. NoSQL, Schemas, Query Builders v. ORMs</li>
+      <li class="list-item">Authentication</li>
+      <li class="list-item">Version Control: Git, GitHub</li>
+      <li class="list-item">Deployment</li>
+
+    </ul>
+    <p class="mt-4">We don't expect you to have all of this down perfectly at this point and it might be a little while
+      since you've touched full stack development. To hopefully give you a refresher, I've developed a small (optional)
+      project using all of the skills above. </p>
+    <h3 class="my-4 text-xl text-green-600 font-semibold">🐘 JumboCodeGPT 🐘</h3>
+    <p>Large Language Models (LLMs) have the potential to drastically impact education and require us to rethink how we
+      teach CS. In this project, you'll use your prompt engineering and programming skills to create an ChatGPT-like
+      interface! </p>
+    <p class="my-2">Here's what your final interface <span class="italic">could</span> look like:</p>
+    <img width="300px" src="../img/chatgpt_interface_example.png" alt="Example of a ChatGPT interface"></img>
+
+    <h3 class="my-4 text-lg text-green-600 ">Functionality Requirements</h3>
+    <ul class="ml-4 lg:ml-6 lg:mr-2 list-disc">
+
+      <li class="list-item mb-1">
+        Build a user interface to display messages in a conversation and send messages to a chatbot.
+      </li>
+      <li class="list-item mb-1">
+        Implement a basic (but secure) authentication system to track user chat messages.
+      </li>
+      <li class="list-item mb-1">
+        Log all prompts and responses from users in a non-volatile memory system like a database.
+      </li>
+      <li class="list-item mb-1">
+        Deploy your site such that it's both functional and accessible to the internet.
+      </li>
+      <li class="list-item mb-1">
+        Add system prompts to refine the behavior of your chatbot. Is it a bot that responds with JavaScript related
+        puns? Or a bot interested in becoming a Terminator? It's totally up to you!
+      </li>
+
+    </ul>
+
+
+    <a class="text-blue-500 hover:underline active:text-blue-600" target="_blank" rel="noreferrer"
+      href="./project-example/">Link to an example implementation (with a default chatbot)</a>
+
+    <h3 class="my-4 text-lg text-green-600 ">I need some help!</h3>
+    <p>This can be a lot of work if you do it all yourself! Luckily I have some tools that can expidite your development
+      process.</p>
+    <ul class="ml-4 lg:ml-6 lg:mr-2 list-disc mt-2">
+      <li class="list-item mb-1">
+        I already have a backend server up that handles authentication and OpenAI API communication <a class="text-blue-500 hover:underline active:text-blue-600" href="./server_documentation.txt">(see documentation
+        here)</a>. You will still need your own backend server to log messages!
+      </li>
+      <li class="list-item mb-1">
+        Feel free to ask me for some of the components I made for the frontend example. I won't give you the entire
+        system though!
+      </li>
+      <li class="list-item mb-1">
+        I'd suggest deploying through GitHub actions with a service like Vercel
+      </li>
+      <li class="list-item mb-1">I'm always more than happy to answer some of your questions. Please don't struggle in silence (or have your devs struggle in silence)!</li>
+    </ul>
+
+</body>
+
+</html>
