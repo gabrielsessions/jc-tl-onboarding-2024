@@ -35,56 +35,55 @@
     </p>
 
     <h3 class="my-4 text-xl text-green-600 font-semibold">🐘 JumboCodeGPT 🐘</h3>
-    <p>
+    <p class="my-2">
       Large Language Models (LLMs) have the potential to drastically impact education and require us to rethink how we
       teach CS. They're also an incredibly useful resource when debugging when debugging code. In this project, you'll
-      use your prompt engineering and programming skills to create an ChatGPT-like
+      use your prompt engineering and programming skills to create a ChatGPT
       interface with React!
     </p>
-    <p class="my-2">Here's what your final interface <span class="italic">could</span> look like:</p>
     <img width="300px" src="../img/chatgpt_interface_example.png" alt="Example of a ChatGPT interface"></img>
-
-    <p>There's no one right way to achieve a working chatbot, and feel free to use strategies (for anything — styling, architecture, backend) that you're more comfortable with or have used before.</p>
 
     <h3 class="my-4 text-lg text-green-600 ">Functionality Requirements</h3>
     <ul class="ml-4 lg:ml-6 lg:mr-2 list-disc">
       <li class="list-item mb-1">
-        Build a user interface with React to display messages in a conversation and send messages to a chatbot.
+        Your system must serve a webpage with a ChatGPT interface. (UI Example Above)
         <ul class="ml-4 lg:ml-6 lg:mr-2 list-disc">
-          <li class="list-item my-1">
-            The prompt sent to OpenAI must include ALL chat messages in a conversation.
-            Previous messages must be sent as context to maintain a fluid conversation.
+          <li>Users must be able to send prompts to ChatGPT and receive responses using your interface.</li>
+          <li>The chatbot should consider the full context of the conversation, not just the most recently submitted prompt(s).
           </li>
         </ul>
       </li>
-      <li class="list-item mb-1">
-        Log all prompts from users and responses from OpenAI in a non-volatile memory system like a database.
-      </li>
-      <li class="list-item mb-1">
-        Add system prompts to refine the behavior of your chatbot. Is it a bot that responds with JavaScript related
+      <li class="mb-1">
+        Give your chatbot a personality. Is it a bot that responds with JavaScript related
         puns? Or a bot interested in becoming a Terminator? It's totally up to you!
-        <ul class="ml-4 lg:ml-6 lg:mr-2 list-disc">
-          <a class="list-item my-1 text-blue-500 hover:underline active:text-blue-600"
-            href="https://platform.openai.com/docs/guides/text-generation/chat-completions-api" target="_blank"
-            rel="noreferrer">
-            How do I send system prompts and structure conversations?
-          </a>
-        </ul>
-
       </li>
       <li class="list-item mb-1">
-        Deploy your fully functional site to the internet.
+        The system must log all user prompts and ChatGPT responses in a database (or other non-volatile memory storage).
       </li>
+      <li class="list-item mb-1">
+        The conversation(s) should be persistent between page loads. In other words, the user
+        shouln't lose their conversation when the webpage is reloaded.
+      </li>
+      <li class="list-item mb-1">Your ChatGPT interface needs to be publicly accessible on the internet.</li>
+      
     </ul>
 
-    <p class="my-2 mt-4">Additional features to implement if you need practice with these areas of web dev:</p>
+    <h3 class="my-4 text-lg text-green-600 ">Technical Requirements</h3>
+    <p>You are allowed to choose any tech stack with the following stipulations:</p>
     <ul class="ml-4 lg:ml-6 lg:mr-2 list-disc">
       <li class="list-item mb-1">
-        Implement a basic (but secure) authentication system to track user chat messages.
+        You are required to use React to build your user interface
       </li>
-    </ul> 
-
-    <div class="my-2"></div>  
+      <li class="mb-1">All OpenAI API calls need to be sent through Gabe's <a class="text-blue-500 hover:underline active:text-blue-600" target="_blank" rel="noreferrer"
+        href="./server_documentation.txt">OpenAI API wrapper</a> from a backend server.</li>
+      <li class="list-item mb-1">
+        We'd like you to practice with something other than Firebase
+      </li>
+    </ul>
+    <p>There's no one right way to achieve a working chatbot, and feel free to use strategies (for anything — styling,
+      architecture, backend) that you're comfortable with or have used before. This is also a great opportunity to try
+      out new web dev tools if you feel adventurous.</p>
+    <div class="my-2"></div>
 
 
     <a class="text-blue-500 hover:underline active:text-blue-600" target="_blank" rel="noreferrer"
@@ -97,30 +96,25 @@
       hours per week on it. Please reach out ASAP if you're spending significantly more time on the project than our
       estimate.</p>
     <p class="my-1">
-      We'll have short (~15 min) weekly check-ins to answer any questions that have come up about the onboarding project.
+      We'll have short (~15 min) weekly check-ins to answer any questions that have come up about the onboarding
+      project.
     </p>
     <p class="my-1">
-      <span class="italic underline font-semibold">Please send Gabriel and Ben your planned tech stack before you start implementing your design!</span> Try to have an initial tech stack planned and sent to us before your first check-in.
+      <span class="italic underline font-semibold">Please send Gabriel and Ben your planned tech stack before you start
+        implementing your design!</span> Try to have an initial tech stack planned and sent to us before your first
+      check-in.
     </p>
 
-    <h3 class="my-4 text-lg text-green-600 ">I need some help!</h3>
+    <h3 class="my-4 text-lg text-green-600 ">Resources</h3>
     <ul class="ml-4 lg:ml-6 lg:mr-2 list-disc mt-2">
-      <li class="mb-1 list-item"><a class="text-blue-500 hover:underline active:text-blue-600" href="../resources/">Link to some of our onboarding resources</a></li>
-      <li class="list-item mb-1">Use our <a target="_blank" rel="noreferrer"
+      <li class="mb-1 list-item"><a class="text-blue-500 hover:underline active:text-blue-600" href="../resources/">Link
+          to some of our onboarding docs</a></li>
+      <li class="list-item mb-1"><a target="_blank" rel="noreferrer"
           href="https://github.com/JumboCode/vite-template/tree/main"
-          class="text-blue-500 hover:underline active:text-blue-600">Vite Template Project</a>!</li>
+          class="text-blue-500 hover:underline active:text-blue-600">Vite Template Project</a></li>
       <li class="list-item mb-1">
-        We already have a backend server up that handles authentication and OpenAI API communication <a
-          class="text-blue-500 hover:underline active:text-blue-600" href="./server_documentation.txt">(see
-          documentation
-          here)</a>. Please don't call it directly from the frontend, we want you to write your own backend!
-      </li>
-      <li class="list-item mb-1">
-        Feel free to ask me for some of the components I made for the frontend example. (Or use the chatbot for some
-        code)
-      </li>
-      <li class="list-item mb-1">
-        We recommend connecting your GitHub repo to Vercel for easy deployment.
+        Gabe's <a
+          class="text-blue-500 hover:underline active:text-blue-600" href="./server_documentation.txt">OpenAI API wrapper docs</a>. (Please don't call it directly from your frontend!)
       </li>
       <li class="list-item mb-1">
         Ask questions in <span class="text-green-600 underline">#tech-leads</span> or DM Gabriel/Ben!
