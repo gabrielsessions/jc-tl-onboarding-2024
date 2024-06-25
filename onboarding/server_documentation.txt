@@ -21,8 +21,8 @@ Example Frontend Fetch:
 fetch("https://tl-onboarding-project-dxm7krgnwa-uc.a.run.app/login", {
     method: "POST",
     body: JSON.stringify({
-        username: "developer",
-        password: <ASK_GABE_FOR_PASSWORD>
+        username: YOUR_USERNAME,
+        password: YOUR_PASSWORD
     })
   }).then(res => res.json()).then(res => console.log(res))
 
@@ -36,7 +36,7 @@ Example Frontend Fetch:
 fetch("https://tl-onboarding-project-dxm7krgnwa-uc.a.run.app/prompt", {
     method: "POST",
     headers: {
-        Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImdhYnJpZWxzZXNzaW9ucyIsImV4cGlyZXMiOiIyMDI0LTA1LTIwVDIyOjQ0OjM5LjMzMVoiLCJpYXQiOjE3MTYyNDE0Nzl9.Nv0cSSKk6jV-o7o3kwl4f7LCa-AMWaUnA8csGJ4DscY" // Add your JWT here!
+        Authorization: "Bearer <JWT>" // Add your JWT here!
     },
     body: JSON.stringify({
         model: "gpt-4o",
@@ -65,7 +65,6 @@ socket.addEventListener('message', (evt) => {
     console.log(chunk);
 })
  
-
 
 For help on how to structure your OpenAI prompts and avaliable config options,
 check out OpenAI's documentation: 
