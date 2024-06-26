@@ -52,7 +52,7 @@ sec-websocket-protocol header. A prompt should be sent as a JSON string through
 the websocket connection.
 
 Example WS Connection:
-const socket = new WebSocket('http://localhost:8080/ws-prompt', [userJWT]);
+const socket = new WebSocket('https://tl-onboarding-project-dxm7krgnwa-uc.a.run.app/ws-prompt', [userJWT]);
 socket.addEventListener('open', () => {
     socket.send(JSON.stringify({
     model: "gpt-4o",
